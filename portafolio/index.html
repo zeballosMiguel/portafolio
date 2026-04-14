@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">miguel angel zeballos</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#acercade">Acerca de</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>        
+        </div>
+       <!--<h1>bienbenido a mi sitio web</h1> --> 
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="container person">
+                <div class="person-content">
+                    <h1>Bienvenido a mi sitio web</h1>
+                    <p>¡Hola! Soy Miguel Angel Zeballos, estudiante de la carrera de informatica Umsa, de 6to semestre.</p>
+                    <a href="#contacto" class="btn"> Contactame </a>
+                </div>
+
+            </div>
+        </section>
+        <section id="acercade">
+            <div class="container about">
+                <h2>Acerca de mi</h2>
+                <p>Soy un estudiante de la carrera de informática de la Universidad Mayor de San Andrés, actualmente en sexto semestre. Me apasiona la programación y el desarrollo de software.</p>
+                <div class="lenguajes">lenguaje de programación:
+                    <div class="item-l">python</div>
+                    <div class="item-l">JavaScript</div>
+                    <div class="item-l">base de datos</div>
+                </div>
+            </div>
+        </section>
+        <section id="servicios">
+            <h2>materias aprobadas, 5</h2>
+           </section>
+        <section id="contacto">         
+            <h2>Contacto</h2>
+            <div class="container contact">
+                <h2 class="section-title">Contáctenos</h2>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+                    </form>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.8rem; text-align: center;">
+                    Prometemos responder en menos de 24 horas.
+                    </p>
+            </div>
+        </div>
+        </section>
+        </main>
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>  
+        </div>
+        <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+</html>
