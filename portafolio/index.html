@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Sitio Web</title>
+
+    <meta name="description" content="Bienvenido a mi sitio web personal, donde comparto mis proyectos, habilidades y formas de contacto.">
+    <meta name="keywords" content="sitio web personal, proyectos, habilidades, contacto, informatica, miguel angel zeballos">
+    <meta name="author" content="Miguel Angel Zeballos">
+    <meta property="og:title" content="Mi Sitio Web Personal">
+    <meta property="og:description" content="Bienvenido a mi sitio web personal">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -27,9 +34,21 @@
         <section id="inicio">
             <div class="container person">
                 <div class="person-content">
-                    <h1>Bienvenido a mi sitio web</h1>
-                    <p>¡Hola! Soy Miguel Angel Zeballos, estudiante de la carrera de informatica Umsa, de 6to semestre.</p>
-                    <a href="#contacto" class="btn"> Contactame </a>
+                    <span class="person-badge">Disponible para proyectos</span>
+                    <h1>Hola, soy <br> <strong>Miguel Angel Zeballos</strong></h1>
+                    <p>Estudiante de la carrera de informatica Umsa, de 6to semestre.</p>
+                    <div class="actions">
+                        <a href="#servicios" class="btn btn--primary">Mis proyectos</a>
+                        <a href="#contacto" class="btn btn--secondary"> Contactame </a>
+                    </div>
+                    <aside class="person-img">
+                        <div class="float-card card--a">React</div>
+                        <div class="float-card card--b">Nodejs</div>
+                        <div class="float-card card--c">Python</div>
+                        <div class="avatar">
+                            <div class="avatar-interior">MZ</div>
+                        </div>
+                    </aside>
                 </div>
 
             </div>
@@ -38,11 +57,33 @@
             <div class="container about">
                 <h2>Acerca de mi</h2>
                 <p>Soy un estudiante de la carrera de informática de la Universidad Mayor de San Andrés, actualmente en sexto semestre. Me apasiona la programación y el desarrollo de software.</p>
-                <div class="lenguajes">lenguaje de programación:
-                    <div class="item-l">python</div>
-                    <div class="item-l">JavaScript</div>
-                    <div class="item-l">base de datos</div>
-                </div>
+                <div class="skill-grid">
+                    <article class="skill-card skill--backend">
+                        <h3>backend</h3>
+                        <ul>
+                            <li>Nodejs</li>
+                            <li>Express</li>
+                            <li>Python</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill--frontend">
+                        <h3>frontend</h3>
+                        <ul>
+                            <li>React</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card skill--database">
+                        <h3>base de datos</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </article>
+                </div>    
+             </div>
             </div>
         </section>
         <section id="servicios">
@@ -86,6 +127,33 @@
             <h2>Contacto</h2>
             <div class="container contact">
                 <h2 class="section-title">Contáctenos</h2>
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <span class="contacto-icon">🌐</span>
+                        <div>
+                            <strong>email</strong>
+                            <p>contacto@miempresa.com</p>
+
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="contacto-icon">🌐</span>
+                        <div>
+                            <strong>Direccion</strong>
+                            <p>123 Calle Principal, Ciudad, País</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="contacto-icon">🌐</span>
+                        <div>
+                            <strong>Respuesta</strong>
+                            <p>Menos de 48hrs</p>
+
+                        </div>
+                    </div>
+                </div>
+                
+
                 <div class="contact-form">
                     <form action="#" method="post">
                     <div class="form-group">
@@ -98,6 +166,30 @@
                         <input type="email" id="email" name="email" required placeholder="tu@email.com">
                     </div>
                     
+                    <div class="form-group">
+                        <label for="presupuesto">Presupuesto Estimado</label>
+                        <span class="rango-valor" id="rango-valor">$1,000 - $5,000</span>
+                        <input type="range" id="presupuesto" name="presupuesto" min="1000" max="5000" step="500" value="3000" oninput="document.getElementById('rango-valor').textContent = '$' + this.value">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="servicio">Tipo de servicio</label>
+                    <input
+                        type="search"
+                        id="servicio"
+                        name="servicio"
+                        list="servicios-list"
+                        placeholder="Busca un servicio..."
+                    />
+                    <datalist id="servicios-list">
+                        <option value="Desarrollo Web Full Stack">
+                        <option value="API REST / Back-End">
+                        <option value="Diseño UI / Front-End">
+                        <option value="Base de Datos">
+                        <option value="Consultoría Técnica">
+                    </datalist>
+                    </div>
+
                     <div class="form-group">
                         <label for="mensaje">Mensaje</label>
                         <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
@@ -114,14 +206,18 @@
         </section>
         </main>
     <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>  
+    <div class="container">
+        <div class="footer-brand">
+        <span class="logo">Miguel Angel</span>
+        <p>Desarrollador Full Stack · La Paz, Bolivia</p>
         </div>
-        <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.
-        </p>
+        <nav class="social-links">
+        <a href="https://github.com" target="_blank">Github</a>
+        <a href="https://www.linkedin.com" target="_blank">Linkedin</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </nav>
+    </div>
+    <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
