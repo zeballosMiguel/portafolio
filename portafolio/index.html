@@ -41,16 +41,15 @@
                         <a href="#servicios" class="btn btn--primary">Mis proyectos</a>
                         <a href="#contacto" class="btn btn--secondary"> Contactame </a>
                     </div>
-                    <aside class="person-img">
-                        <div class="float-card card--a">React</div>
-                        <div class="float-card card--b">Nodejs</div>
-                        <div class="float-card card--c">Python</div>
-                        <div class="avatar">
-                            <div class="avatar-interior">MZ</div>
-                        </div>
-                    </aside>
                 </div>
-
+                <aside class="person-img">
+                    <div class="float-card card--a">React</div>
+                    <div class="float-card card--b">Nodejs</div>
+                    <div class="float-card card--c">Python</div>
+                    <div class="avatar">
+                        <div class="avatar-interior">MZ</div>
+                    </div>
+                </aside>
             </div>
         </section>
         <section id="acercade">
@@ -124,85 +123,71 @@
             </div>
            </section>
         <section id="contacto">         
-            <h2>Contacto</h2>
             <div class="container contact">
-                <h2 class="section-title">Contáctenos</h2>
-                <div class="contacto-info">
-                    <div class="contacto-item">
-                        <span class="contacto-icon">🌐</span>
-                        <div>
-                            <strong>email</strong>
-                            <p>contacto@miempresa.com</p>
-
+                <div class="contact-header">
+                    <h2 class="section-title">Contáctenos</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contacto-info">
+                        <div class="contacto-item">
+                            <span class="contacto-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contacto@miempresa.com</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <span class="contacto-icon">📍</span>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Calle Principal 123, La Paz, Bolivia</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <span class="contacto-icon">⏱️</span>
+                            <div>
+                                <strong>Respuesta</strong>
+                                <p>Menos de 48 horas</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contacto-item">
-                        <span class="contacto-icon">🌐</span>
-                        <div>
-                            <strong>Direccion</strong>
-                            <p>123 Calle Principal, Ciudad, País</p>
-                        </div>
-                    </div>
-                    <div class="contacto-item">
-                        <span class="contacto-icon">🌐</span>
-                        <div>
-                            <strong>Respuesta</strong>
-                            <p>Menos de 48hrs</p>
 
-                        </div>
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="presupuesto">Presupuesto estimado</label>
+                                <span class="rango-valor" id="rango-valor">$1,000 - $5,000</span>
+                                <input type="range" id="presupuesto" name="presupuesto" min="1000" max="5000" step="500" value="3000" oninput="document.getElementById('rango-valor').textContent = '$' + this.value">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicio">Tipo de servicio</label>
+                                <input type="search" id="servicio" name="servicio" list="servicios-list" placeholder="Busca un servicio...">
+                                <datalist id="servicios-list">
+                                    <option value="Desarrollo Web Full Stack">
+                                    <option value="API REST / Back-End">
+                                    <option value="Diseño UI / Front-End">
+                                    <option value="Base de Datos">
+                                    <option value="Consultoría Técnica">
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Enviar mensaje</button>
+                        </form>
+                        <p class="contact-note">Prometemos responder en menos de 24 horas.</p>
                     </div>
                 </div>
-                
-
-                <div class="contact-form">
-                    <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="presupuesto">Presupuesto Estimado</label>
-                        <span class="rango-valor" id="rango-valor">$1,000 - $5,000</span>
-                        <input type="range" id="presupuesto" name="presupuesto" min="1000" max="5000" step="500" value="3000" oninput="document.getElementById('rango-valor').textContent = '$' + this.value">
-                    </div>
-                    
-                    <div class="form-group">
-                    <label for="servicio">Tipo de servicio</label>
-                    <input
-                        type="search"
-                        id="servicio"
-                        name="servicio"
-                        list="servicios-list"
-                        placeholder="Busca un servicio..."
-                    />
-                    <datalist id="servicios-list">
-                        <option value="Desarrollo Web Full Stack">
-                        <option value="API REST / Back-End">
-                        <option value="Diseño UI / Front-End">
-                        <option value="Base de Datos">
-                        <option value="Consultoría Técnica">
-                    </datalist>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit">Enviar mensaje</button>
-                    </form>
-                    
-                    <p style="margin-top: 1rem; font-size: 0.8rem; text-align: center;">
-                    Prometemos responder en menos de 24 horas.
-                    </p>
             </div>
-        </div>
         </section>
         </main>
     <footer>
@@ -219,5 +204,17 @@
     </div>
     <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        const header = document.querySelector('header');
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
 </body>
 </html>
